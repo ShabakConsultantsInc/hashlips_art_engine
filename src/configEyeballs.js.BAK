@@ -2,15 +2,11 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 
-const network = NETWORK.sol;
-// 20220808, Wallet:  HwDhm5d8yYuR7i5vWcQLifTTaEf68oAUEzEi1UGm79We //F8Q5zX1ygU6YLLqPw1CkcDtzynUHLnjqd2A32KpkgNqE
-// other:  44pWCvFRqLw1gw6c4bVhbHW1jzETFvNUkDZeEUtxhquc
-// quicknode:  RPC - https://boldest-still-surf.solana-devnet.discover.quiknode.pro/19284833cf2366e45cefca47224e189f86405fc9/
-// wss:  wss://boldest-still-surf.solana-devnet.discover.quiknode.pro/19284833cf2366e45cefca47224e189f86405fc9/
+const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Magic Sea Launch Logos";
-const description = "A limited collection of Magic Sea LLC logos";
+const namePrefix = "Eyeballs";
+const description = "A limited collection of Eyeballs";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
@@ -19,24 +15,24 @@ const solanaMetadata = {
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
     {
-      address: "HwDhm5d8yYuR7i5vWcQLifTTaEf68oAUEzEi1UGm79We",
-      share: 50,
+      address: "D8j6LD6Pc4DF9VwxFEY8HhBAhZFkpx582J9zY1y9XsNo",
+      share: 100,
     },
-    {
-      address: "44pWCvFRqLw1gw6c4bVhbHW1jzETFvNUkDZeEUtxhquc",
-      share: 50,
-    }
   ],
-
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 1000,
     layersOrder: [
       { name: "Background" },
-      { name: "Logo" },
+      { name: "Eyeball" },
+      { name: "Eye color" },
+      { name: "Iris" },
+      { name: "Shine" },
+      { name: "Bottom lid" },
+      { name: "Top lid" },
     ],
   },
 ];
@@ -82,9 +78,7 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {
-  creator: "Magic Sea LLC",
-};
+const extraMetadata = {};
 
 const rarityDelimiter = "#";
 
